@@ -1,0 +1,14 @@
+$dark-text-color: #FA1E88;
+$bright-header-color: #282c34;
+
+.app-header {
+  background-color: $dark-text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color:$bright-header-color;
+  font-size: 5em;
+  font-style: italic;
+  padding: 3rem;
+}

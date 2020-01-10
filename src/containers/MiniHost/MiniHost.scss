@@ -1,0 +1,17 @@
+$dark-text-color: #282c34;
+$bright-header-color: #FA1E88;
+
+.entryPage-miniHost-hostAvatar {
+  border-radius: 5px;
+  border: 1px $dark-text-color solid;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  text-align: center;
+  box-shadow: 0 4.5px 9px 0 rgba(250, 30, 136, 0.25), 0 7px 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+.host-avatar-picture {
+  max-height: 320px;
+  max-width: 200px;
+}
