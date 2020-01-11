@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import Header from '../../components/Header/Header';
 import EntryForm from '../EntryForm/EntryForm';
+import HostPage from '../../components/HostPage/HostPage';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getInfo } from '../../util/apiCalls';
@@ -35,13 +36,25 @@ export class App extends Component {
             </>
           )
         }} />
+        <Route path='/hosts/:id' render={(match) => {
+          console.log('MATCH', match.match.params)
+          const selectedHost = this.props.hostList.find(host => {
+            console.log('ID', host.id)
+            return host.id === parseInt(match.match.params.id)
+          })
+
+          return (
+            selectedHost && <HostPage host={selectedHost}/>
+          )
+        }}/>
       </main>
     );
   }
 }
 
 export const mapStateToProps = (state) => ({
-  hostList: state.hosts
+  hostList: state.hosts,
+  chosenHost: state.chosenHost
 })
 
 export const mapDispatchToProps = (dispatch) => ({

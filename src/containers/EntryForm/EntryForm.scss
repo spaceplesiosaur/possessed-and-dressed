@@ -1,6 +1,9 @@
 $dark-text-color: #282c34;
 $bright-header-color: #FA1E88;
 
+.hidden {
+  display: none;
+}
 .app-entryForm {
   display: flex;
   flex-direction: column;
@@ -13,7 +16,7 @@ h2 {
   padding-bottom: .5rem;
 }
 
-.entryForm-hostName-error {
+.entryForm-hostName-inputError {
   border: 2px solid red;
   border-radius: 5px;
   width: 25rem;
@@ -21,13 +24,19 @@ h2 {
   margin-left: .5rem;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.entryForm-error-text {
+  position: fixed;
+  left: 20px;
+  bottom: 10px;
+  background-color: white;
+  font-size: .5rem;
+  font-weight: bold;
   color: red;
 }
 
 .entryForm-hostName-inputSet {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
   position: fixed;
   left: 20px;
   bottom: 20px;
@@ -47,11 +56,13 @@ h2 {
     }
     button {
       max-height: 55px;
+      height: 5em;
       width: 9em;
       border-radius: 5px;
       margin-left: .5em;
       font-size: 1.5em;
     }
+
 }
 
 .entryForm-hostName-styling {
