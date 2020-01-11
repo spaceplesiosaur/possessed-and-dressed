@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntryForm should render with the correct properites 1`] = `
+<section
+  className="app-entryForm"
+>
+  <h2>
+    Welcome!  Choose the person you would like to possess
+  </h2>
+  <div
+    className="entryForm-hostName-inputSet"
+  >
+    <div
+      className="entryForm-hostName-styling"
+    >
+      <label
+        className="entryForm-hostName-label"
+        htmlFor="hostName"
+      >
+        Chosen Host
+      </label>
+      <input
+        className="entryForm-hostName-input"
+        name="hostName"
+      />
+    </div>
+  </div>
+  <section
+    className="app-entryForm-hostList"
+  >
+    <MiniHost
+      name="Blucifer"
+      picture="https://i.imgur.com/I5MqMUV.jpg"
+    />
+    <MiniHost
+      name="Shimmeree"
+      picture="https://i.imgur.com/P9srxtU.jpg"
+    />
+    <MiniHost
+      name="Rainbow Dash"
+      picture="https://i.imgur.com/GJthKTQ.jpg"
+    />
+  </section>
+  <NavLink
+    render={[Function]}
+    to="/hosts/:id"
+  />
+</section>
+`;

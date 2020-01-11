@@ -20,13 +20,11 @@ export class App extends Component {
   }
 
   supplyHosts = () => {
-    console.log('PROPS', this.props)
     return getInfo('https://color-seasons.herokuapp.com/hosts/', 'hosts')
     .then(data => this.props.storeHosts(data))
   }
 
   render() {
-    console.log('HOSTS', this.props.hostList)
     return (
       <main className="app">
         <Route exact path='/' render={() => {
