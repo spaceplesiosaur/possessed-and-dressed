@@ -8,8 +8,8 @@ import { setAllColors } from '../../actions/index.js';
 import { setSeasons } from '../../actions/index.js';
 
 export class ColorChooser extends Component {
-  constructor() {
-    super()
+  constructor({colorCategories, hexCodes, seasons}) {
+    super({colorCategories, hexCodes, seasons})
     this.state = {
 
     }
@@ -29,9 +29,19 @@ export class ColorChooser extends Component {
     getInfo('https://color-seasons.herokuapp.com/seasons/', 'seasonal analysis')
     .then(data => this.props.storeSeasons(data))
   }
-  // displayColorBar = () => {
-  //   const colorWheel = []
-  // }
+
+  displayColorBar = () => {
+    const: colorBuilder = [{red: '#F87E97', orange: '#F89C51', yellow: '#E7C142', green: '#A7C65F', blue: '#5DA1DA', violet: '#5C50B6', pink: '#DE92DA', neutral: '#E2E2E3'}]
+    
+    const colorWheel = colorCategories.map(category => {
+      return (
+        <ColorChooser
+          color={category.color}
+          borderColor=
+        />
+      )
+    })
+  }
   render() {
     <section className="colorBar-main-frame">
       <h2>What color would you like your host to wear?</h2>
