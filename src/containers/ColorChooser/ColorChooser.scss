@@ -1,12 +1,14 @@
 .colorChooser-colorDropdown-widget {
   display: flex;
   flex-direction: column;
+  height: 400px;
 }
 
 .colorList-box {
-  width: 3em;
-  height: 1em;
+  width: 8em;
+  height: 6em;
   margin-left: 2em;
+  background-color: white;
 }
 
 .colorList-hues {

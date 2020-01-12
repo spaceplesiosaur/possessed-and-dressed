@@ -4,7 +4,7 @@ import ColorChooser from '../ColorChooser/ColorChooser';
 import { getInfo } from '../../util/apiCalls';
 import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index.js';
-// import { setAllColors } from '../../actions/index.js';
+import { setAllColors } from '../../actions/index.js';
 // import { setSeasons } from '../../actions/index.js';
 
 export class ColorBar extends Component {
@@ -17,7 +17,7 @@ export class ColorBar extends Component {
 
   componentDidMount() {
     this.supplyColorCategories();
-    // this.supplyHexCodes();
+    this.supplyHexCodes();
     // this.supplySeasons()
   }
 
@@ -47,23 +47,27 @@ export class ColorBar extends Component {
 
     const colorWheel = this.props.colorCategories.map(category => {
       const colorBorder = colorBuilder.find(color => {
-        return Object.keys(color) === category.name
-      })
+        // console.log('THIS IS THE COLOR', color)
+        // console.log('obecg color', Object.keys(color)[0])
+        // console.log('houih', category.name)
+        return Object.keys(color)[0] === category.name
+      })[category.name]
       return (
         <ColorChooser
-          colorName={category.name.toUppercase()}
+          colorName={category.name}
           hues={category.colors}
           borderColor={colorBorder}
         />
       )
     })
+    return colorWheel
   }
 
   render() {
     return (this.props.colorCategories && (
       <section className="colorBar-main-frame">
       <h2>What color would you like your host to wear?</h2>
-      <section className="coloBar-frame-navBar">
+      <section className="colorBar-frame-navBar">
         {this.displayColorBar()}
       </section>
     </section>)
@@ -79,7 +83,7 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   storeCategories: (categoriesInfo) => dispatch(setCategories(categoriesInfo)),
-  // storeAllColors: (colorsInfo) => dispatch(setAllColors(colorsInfo)),
+  storeAllColors: (colorsInfo) => dispatch(setAllColors(colorsInfo)),
   // storeSeasons: (seasonsInfo) => dispatch(setSeasons(seasonsInfo))
 })
-export default connect(mapStateToProps, null)(ColorBar)
+export default connect(mapStateToProps, mapDispatchToProps)(ColorBar)

@@ -4,21 +4,21 @@ import { connect } from 'react-redux'
 
 export default class ColorChooser extends Component {
   constructor({colorName, hues, borderColor}) {
-    super()
+    super({colorName, hues, borderColor})
     this.state = {
       listDisplay: 'colorList-hues',
     }
   }
 
   hydrateColorList = () => {
-    this.props.hues.map(hue => {
-      return <li className="colorList-box" background-color={hue}></li>
+    return this.props.hues.map(hue => {
+      return <li className="colorList-box" style={{backgroundColor: {hue}}}></li>
     })
   }
   render() {
     return (
       <div className="colorChooser-colorDropdown-widget">
-        <h4 className="colorList-box" border={`3px solid ${this.props.borderColor}`}>{this.props.colorName}</h4>
+        <h4 className="colorList-box" style={{border: `10px solid ${this.props.borderColor}`}}>{this.props.colorName}</h4>
         <ul className={this.state.listDisplay}>
           {this.hydrateColorList()}
         </ul>
