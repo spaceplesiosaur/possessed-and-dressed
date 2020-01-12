@@ -1,0 +1,16 @@
+.colorChooser-colorDropdown-widget {
+  display: flex;
+  flex-direction: column;
+}
+
+.colorList-box {
+  width: 3em;
+  height: 1em;
+  margin-left: 2em;
+}
+
+.colorList-hues {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

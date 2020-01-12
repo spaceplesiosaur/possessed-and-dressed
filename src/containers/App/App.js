@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import Header from '../../components/Header/Header';
 import EntryForm from '../EntryForm/EntryForm';
+import ColorBar from '../ColorBar/ColorBar';
 import HostPage from '../../components/HostPage/HostPage';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -44,7 +45,12 @@ export class App extends Component {
           })
 
           return (
-            selectedHost && <HostPage host={selectedHost}/>
+            selectedHost && (
+              <>
+                <HostPage host={selectedHost}/>
+                <ColorBar />
+              </>
+            )
           )
         }}/>
       </main>

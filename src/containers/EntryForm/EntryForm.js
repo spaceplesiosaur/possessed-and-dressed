@@ -3,7 +3,9 @@ import { Redirect } from 'react-router-dom';
 import './EntryForm.scss';
 import MiniHost from '../MiniHost/MiniHost';
 import { connect } from 'react-redux';
-import { chooseHost } from '../../actions/index.js'
+import { chooseHost } from '../../actions/index.js';
+import { setCategories } from '../../actions/index.js';
+// import { getInfo } from '../../util/apiCalls';
 
 export class EntryForm extends Component {
   constructor() {
@@ -46,11 +48,33 @@ export class EntryForm extends Component {
 
   }
 
+  // supplyColorCategories = () => {
+  //   console.log('I ran')
+  //   getInfo('https://color-seasons.herokuapp.com/categories/', 'color categories')
+  //   .then(data => this.props.storeCategories(data))
+  //   // .then(data => console.log(data))
+  // }
+
+  // supplyHexCodes = () => {
+  //   console.log('I ran')
+  //   getInfo('https://color-seasons.herokuapp.com/colors/', 'colors and hex codes')
+  //   .then(data => this.props.storeAllColors(data))
+  //   // .then(data => console.log(data))
+  // }
+  //
+  // supplySeasons = () => {
+  //   console.log('I ran')
+  //   getInfo('https://color-seasons.herokuapp.com/seasons/', 'seasonal analysis')
+  //   .then(data => this.props.storeSeasons(data))
+  //   // .then(data => console.log(data))
+  // }
+
   handleClick = async () => {
     if (this.findHost() === 'error' || this.state.hostName === "") {
       await this.setState({error: true})
       this.handleError()
     } else {
+      // await this.supplyColorCategories()
       this.props.chooseAHost(this.findHost())
       this.setState({hostPossessed: true})
     }
@@ -85,6 +109,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  chooseAHost: hostInfo => dispatch(chooseHost(hostInfo))
+  chooseAHost: hostInfo => dispatch(chooseHost(hostInfo)),
+  storeCategories: (categoriesInfo) => dispatch(setCategories(categoriesInfo)),
 })
 export default connect(mapStateToProps, mapDispatchToProps)(EntryForm)
