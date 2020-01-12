@@ -43,19 +43,29 @@ export class ColorBar extends Component {
   }
 
   displayColorBar = () => {
-    const colorBuilder = [{red: '#F87E97'}, {orange: '#F89C51'}, {yellow: '#E7C142'}, {green: '#A7C65F'}, {blue: '#5DA1DA'}, {violet: '#5C50B6'}, {pink: '#DE92DA'}, {neutral: '#E2E2E3'}]
+    const colorTitles = [{red: '#F87E97'}, {orange: '#F89C51'}, {yellow: '#E7C142'}, {green: '#A7C65F'}, {blue: '#5DA1DA'}, {violet: '#5C50B6'}, {pink: '#DE92DA'}, {neutral: '#E2E2E3'}]
 
     const colorWheel = this.props.colorCategories.map(category => {
-      const colorBorder = colorBuilder.find(color => {
-        // console.log('THIS IS THE COLOR', color)
-        // console.log('obecg color', Object.keys(color)[0])
-        // console.log('houih', category.name)
+
+      const colorBorder = colorTitles.find(color => {
         return Object.keys(color)[0] === category.name
       })[category.name]
+
+      console.log('HEXES', this.props.hexCodes)
+      const decipherHues = category.colors.map(hue => {
+        return this.props.hexCodes.find(hex => {
+          return hex.id === hue
+        })
+      })
+
+      console.log('HUES', decipherHues)
+      // console.log('COLOR NAME', category.name)
+      // console.log('BORDER COLOR', colorBorder)
+      // console.log('HUES', decipherHues.hex_code)
       return (
         <ColorChooser
           colorName={category.name}
-          hues={category.colors}
+          hues={decipherHues}
           borderColor={colorBorder}
         />
       )
