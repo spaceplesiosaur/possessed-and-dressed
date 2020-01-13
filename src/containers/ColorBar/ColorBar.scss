@@ -7,6 +7,10 @@ $dark-subHeader-color: #541A8B;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url('../../util/images/rainbow_background.jpg');
+  background-size: 150%;
+  background-repeat: repeat-y;
+  background-position: 0 0;
 }
 
 .colorBar-frame-navBar {

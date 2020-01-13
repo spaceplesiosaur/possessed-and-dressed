@@ -1,20 +1,26 @@
 $dark-text-color: #282c34;
 $bright-header-color: #FA1E88;
 $dark-subHeader-color: #541A8B;
+$ghosty-pale-color: #A2B6B5;
 
 .hidden {
   display: none;
 }
 .app-entryForm {
+  background-image: url('../../util/images/ghost_background.jpg');
+  background-size: 150%;
+  background-repeat: repeat-y;
+  background-position: 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 h2 {
-  color: $dark-text-color;
+  color: $ghosty-pale-color;
   padding-top: 3rem;
   padding-bottom: .5rem;
+  font-size: 2rem;
 }
 
 .entryForm-hostName-inputError {
@@ -44,10 +50,9 @@ h2 {
   // right: 200px;
   // top: 300px;
   margin-top: 3rem;
-  background-color: white;
     label {
       align-self: flex-end;
-      color: $dark-text-color;
+      color: $ghosty-pale-color;
       font-size: 3rem;
       max-height: 55px;
     }
@@ -80,7 +85,6 @@ h2 {
 }
 
 .app-entryForm-hostList {
-  // background-image: url('../../images/ghost_background.jpg');
   align-self: center;
   width: 85%;
   display: flex;

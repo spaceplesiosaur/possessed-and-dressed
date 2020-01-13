@@ -1,5 +1,6 @@
 $dark-text-color: #282c34;
 $bright-header-color: #FA1E88;
+$ghosty-pale-color: #A2B6B5;
 
 .entryPage-miniHost-hostAvatar {
   border-radius: 5px;
@@ -19,4 +20,5 @@ $bright-header-color: #FA1E88;
 .host-avatar-name {
   font-size: 3em;
   font-weight: bold;
+  background-color: $ghosty-pale-color;
 }

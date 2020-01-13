@@ -1,23 +1,28 @@
 $dark-text-color: #282c34;
 $bright-header-color: #FA1E88;
 $dark-subHeader-color: #541A8B;
+$ghosty-pale-color: #A2B6B5;
 
 .colorFeedback-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url('../../util/images/ghost_background.jpg');
+  background-size: 150%;
+  background-repeat: repeat-y;
+  background-position: 0 0;
 }
 
 .colorFeedback-main-colorBox {
   margin: 3rem;
   height: 200px;
   width: 200px;
-  border: 1px solid $dark-text-color
+  border: 1px solid $ghosty-pale-color
 }
 
 .colorFeedback-main-feedback {
-  color: $dark-text-color;
+  color: $ghosty-pale-color;
   font-size: 1.5rem;
   margin-top: 1.5rem;
   margin-left: 8em;
