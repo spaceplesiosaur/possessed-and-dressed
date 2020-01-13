@@ -5,7 +5,8 @@ import MiniHost from '../MiniHost/MiniHost';
 import { connect } from 'react-redux';
 import { chooseHost } from '../../actions/index.js';
 import { setCategories } from '../../actions/index.js';
-// import { getInfo } from '../../util/apiCalls';
+import { setAllColors } from '../../actions/index.js';
+import { getInfo } from '../../util/apiCalls';
 
 export class EntryForm extends Component {
   constructor() {
@@ -54,11 +55,12 @@ export class EntryForm extends Component {
   //   .then(data => this.props.storeCategories(data))
   //   // .then(data => console.log(data))
   // }
-
+  //
   // supplyHexCodes = () => {
   //   console.log('I ran')
   //   getInfo('https://color-seasons.herokuapp.com/colors/', 'colors and hex codes')
-  //   .then(data => this.props.storeAllColors(data))
+  //   .then(data => {debugger
+  //     this.props.storeAllColors(data)})
   //   // .then(data => console.log(data))
   // }
   //
@@ -74,7 +76,8 @@ export class EntryForm extends Component {
       await this.setState({error: true})
       this.handleError()
     } else {
-      // await this.supplyColorCategories()
+      // this.supplyColorCategories()
+      // this.supplyHexCodes()
       this.props.chooseAHost(this.findHost())
       this.setState({hostPossessed: true})
     }
@@ -110,6 +113,7 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   chooseAHost: hostInfo => dispatch(chooseHost(hostInfo)),
-  storeCategories: (categoriesInfo) => dispatch(setCategories(categoriesInfo)),
+  // storeCategories: categoriesInfo => dispatch(setCategories(categoriesInfo)),
+  // storeAllColors: colorsInfo => dispatch(setAllColors(colorsInfo))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(EntryForm)

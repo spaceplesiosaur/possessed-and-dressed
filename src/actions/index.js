@@ -22,3 +22,8 @@ export const setSeasons = (seasons) => ({
   type: 'SET_SEASONS',
   seasons: seasons
 })
+
+export const chooseColor = (color) => ({
+  type: 'CHOOSE_COLOR',
+  chosenColor: color
+})

@@ -4,10 +4,12 @@ import Header from '../../components/Header/Header';
 import EntryForm from '../EntryForm/EntryForm';
 import ColorBar from '../ColorBar/ColorBar';
 import HostPage from '../../components/HostPage/HostPage';
+import ColorFeedback from '../ColorFeedback/ColorFeedback';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getInfo } from '../../util/apiCalls';
 import { setHosts } from '../../actions/index.js';
+import { setSeasons } from '../../actions/index.js';
 
 export class App extends Component {
   constructor() {
@@ -19,6 +21,7 @@ export class App extends Component {
 
   componentDidMount() {
     this.supplyHosts()
+    this.supplySeasons()
   }
 
   supplyHosts = () => {
@@ -26,6 +29,28 @@ export class App extends Component {
     .then(data => this.props.storeHosts(data))
   }
 
+  supplySeasons = () => {
+    console.log('I ran')
+    getInfo('https://color-seasons.herokuapp.com/seasons/', 'seasonal analysis')
+    .then(data => this.props.storeSeasons(data))
+    // .then(data => console.log(data))
+  }
+
+  determineMatch = () => {
+    const hostSeason = this.props.seasonList.find(season => {
+      return season.id === this.props.chosenHost.season
+    })
+
+    console.log('HOST SEASON', hostSeason)
+    const isAMatch = hostSeason.colors.includes(this.props.chosenColor.id)
+    // const isAMatch = hostSeason.colors.includes(colorID => {
+    //   console.log('colorID from host season', colorID)
+    //   console.log('chosen color id', this.props.chosenColor.id)
+    //   return colorID === this.props.chosenColor.id
+    // })
+
+    return isAMatch
+  }
   render() {
     return (
       <main className="app">
@@ -37,10 +62,8 @@ export class App extends Component {
             </>
           )
         }} />
-        <Route path='/hosts/:id' render={(match) => {
-          console.log('MATCH', match.match.params)
+        <Route exact path='/hosts/:id' render={(match) => {
           const selectedHost = this.props.hostList.find(host => {
-            console.log('ID', host.id)
             return host.id === parseInt(match.match.params.id)
           })
 
@@ -53,6 +76,17 @@ export class App extends Component {
             )
           )
         }}/>
+        <Route exact path='/hosts/:id/:colorName' render={(match) => {
+          console.log('MATCH', match)
+          return (
+            <>
+            <Header />
+            <ColorFeedback
+              match={this.determineMatch()}
+            />
+            </>
+          )
+        }}/>
       </main>
     );
   }
@@ -60,10 +94,14 @@ export class App extends Component {
 
 export const mapStateToProps = (state) => ({
   hostList: state.hosts,
-  chosenHost: state.chosenHost
+  seasonList: state.seasons,
+  chosenHost: state.chosenHost,
+  chosenColor: state.chosenColor,
+  hexList: state.allColors
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  storeHosts: hostData => dispatch(setHosts(hostData))
+  storeHosts: hostData => dispatch(setHosts(hostData)),
+  storeSeasons: seasonData => dispatch(setSeasons(seasonData))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(App)

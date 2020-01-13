@@ -4,11 +4,13 @@ import { chosenHostReducer } from './chosenHost';
 import { categoriesReducer } from './categories';
 import { allColorsReducer } from './allColors';
 import { seasonsReducer } from './seasons';
+import { chosenColorReducer } from './chosenColor';
 
 export const rootReducer = combineReducers({
   hosts: hostReducer,
   chosenHost: chosenHostReducer,
   categories: categoriesReducer,
   seasons: seasonsReducer,
-  allColors: allColorsReducer
+  allColors: allColorsReducer,
+  chosenColor: chosenColorReducer
 })
