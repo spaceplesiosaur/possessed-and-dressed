@@ -237,4 +237,8 @@ describe('App', () => {
     })
     expect(wrapper.instance().determineMatch()).toEqual(true)
   })
+
+  describe('mapStateToProps', () => {
+    
+  })
 })

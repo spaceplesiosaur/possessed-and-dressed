@@ -38,7 +38,7 @@ describe('getInfo', () => {
       return Promise.resolve({
         ok: true,
         json: () => {
-          Promise.resolve(mockData);
+          return Promise.resolve(mockData);
         }
       })
     })
@@ -50,10 +50,10 @@ describe('getInfo', () => {
     expect(window.fetch).toHaveBeenCalledWith('https://color-seasons.herokuapp.com/hosts/', mockOptions)
   })
 
-  // it('should return the correct data in the correct format', () => {
-  //   let options = mockOptions
-  //   expect(getInfo('https://color-seasons.herokuapp.com/hosts/', 'hosts')).resolves.toEqual(mockData)
-  // })
+  it('should return the correct data in the correct format', () => {
+    let options = mockOptions
+    expect(getInfo('https://color-seasons.herokuapp.com/hosts/', 'hosts')).resolves.toEqual(mockData)
+  })
 
   it('should throw an error when the response is not ok', () => {
     window.fetch = jest.fn().mockImplementation(() => {
