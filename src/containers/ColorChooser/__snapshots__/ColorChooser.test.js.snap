@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorChooser should render with the correct data 1`] = `
+<div
+  className="colorChooser-colorDropdown-widget"
+>
+  <h4
+    className="colorList-box"
+    onClick={[Function]}
+    style={
+      Object {
+        "border": "10px solid #F87E97",
+      }
+    }
+  >
+    red
+  </h4>
+  <ul
+    className="hidden"
+  >
+    <li
+      className="colorList-box"
+      id="astros"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#ff6100",
+        }
+      }
+    />
+    <li
+      className="colorList-box"
+      id="burnt orange"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e5732f",
+        }
+      }
+    />
+    <li
+      className="colorList-box"
+      id="tangelo"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FF9500",
+        }
+      }
+    />
+  </ul>
+</div>
+`;
+
+exports[`ColorChooser should render with the correct data when there is a chosen color 1`] = `
+<Redirect
+  to="/hosts/1/watermelon"
+/>
+`;

@@ -16,6 +16,7 @@ export class ColorChooser extends Component {
   toggleListDisplay = () => {
     this.setState({open: !this.state.open})
   }
+
   handleMenuClick = async () => {
     await this.toggleListDisplay()
     !this.state.open ?
