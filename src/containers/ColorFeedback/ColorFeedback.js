@@ -16,7 +16,7 @@ export const ColorFeedback = ({match, chosenColor, chosenHost, season}) => {
       </div>
       <h2 className="colorFeedback-main-name">{chosenColor.name.toUpperCase()}</h2>
       {determineFeedback()}
-      <Link to='/'><button className="back-button">Back</button></Link>
+      <button className="back-button" onClick={()=> window.location = '/'}>Back</button>
     </section>
   )
 }

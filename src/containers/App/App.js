@@ -5,7 +5,8 @@ import EntryForm from '../EntryForm/EntryForm';
 import ColorBar from '../ColorBar/ColorBar';
 import HostPage from '../../components/HostPage/HostPage';
 import ColorFeedback from '../ColorFeedback/ColorFeedback';
-import { Route } from 'react-router-dom';
+import ErrorPage from '../../components/404Page/404Page'
+import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getInfo } from '../../util/apiCalls';
 import { setHosts } from '../../actions/index.js';
@@ -32,7 +33,6 @@ export class App extends Component {
   supplySeasons = () => {
     getInfo('https://color-seasons.herokuapp.com/seasons/', 'seasonal analysis')
     .then(data => this.props.storeSeasons(data))
-    // .then(data => console.log(data))
   }
 
   determineHostSeason = () => {
@@ -43,19 +43,14 @@ export class App extends Component {
 
   determineMatch = () => {
     const hostSeason = this.determineHostSeason()
-
     const isAMatch = hostSeason.colors.includes(this.props.chosenColor.id)
-    // const isAMatch = hostSeason.colors.includes(colorID => {
-    //   console.log('colorID from host season', colorID)
-    //   console.log('chosen color id', this.props.chosenColor.id)
-    //   return colorID === this.props.chosenColor.id
-    // })
 
     return isAMatch
   }
   render() {
     return (
       <main className="app">
+      <Switch>
         <Route exact path='/' render={() => {
           return (
             <>
@@ -90,6 +85,15 @@ export class App extends Component {
             </>
           )
         }}/>
+        <Route path='*' render={() => {
+          return (
+            <>
+              <Header />
+              <ErrorPage />
+            </>
+          )
+        }}/>
+      </Switch>
       </main>
     );
   }
