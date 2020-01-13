@@ -26,15 +26,12 @@ exports[`ColorFeedback should render with correct data when match is false 1`] =
     NEON STRAWBERRY
      will make them look tired, sad and afraid, and the church will surely try to perform an exorcism on them!
   </p>
-  <Link
-    to="/"
+  <button
+    className="back-button"
+    onClick={[Function]}
   >
-    <button
-      className="back-button"
-    >
-      Back
-    </button>
-  </Link>
+    Back
+  </button>
 </section>
 `;
 
@@ -64,14 +61,11 @@ exports[`ColorFeedback should render with correct data when match is true 1`] = 
     NEON STRAWBERRY
      will look great on them - nobody will suspect a thing!  Happy haunting!
   </p>
-  <Link
-    to="/"
+  <button
+    className="back-button"
+    onClick={[Function]}
   >
-    <button
-      className="back-button"
-    >
-      Back
-    </button>
-  </Link>
+    Back
+  </button>
 </section>
 `;

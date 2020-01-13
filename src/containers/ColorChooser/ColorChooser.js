@@ -3,10 +3,11 @@ import { Redirect } from 'react-router-dom';
 import './ColorChooser.scss'
 import { connect } from 'react-redux'
 import { chooseColor } from '../../actions/index.js';
+import PropTypes from 'prop-types'
 
 export class ColorChooser extends Component {
   constructor({colorName, hues, borderColor}) {
-    super({colorName, hues, borderColor})
+    super()
     this.state = {
       open: false,
       listDisplay: 'hidden',
@@ -34,7 +35,7 @@ export class ColorChooser extends Component {
 
   hydrateColorList = () => {
     return this.props.hues.map(hue => {
-      return <li className="colorList-box" style={{backgroundColor: `${hue.hex_code}`}} id={hue.name} onClick={this.handleColorClick}></li>
+      return <li className="colorList-box" style={{backgroundColor: `${hue.hex_code}`}} id={hue.name} onClick={this.handleColorClick} key={hue.id}></li>
     })
   }
   render() {
@@ -60,3 +61,9 @@ export const mapDispatchToProps = (dispatch) => ({
   chooseColor: chosenColorInfo => dispatch(chooseColor(chosenColorInfo))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(ColorChooser)
+
+ColorChooser.propTypes = {
+  chosenHost: PropTypes.func,
+  chosenColor: PropTypes.func,
+  chooseColor: PropTypes.string
+}

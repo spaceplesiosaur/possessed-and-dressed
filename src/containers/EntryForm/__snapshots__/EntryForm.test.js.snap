@@ -50,16 +50,19 @@ exports[`EntryForm should render with the correct properites when there is not a
   >
     <MiniHost
       id={1}
+      key="1"
       name="Blucifer"
       picture="https://i.imgur.com/I5MqMUV.jpg"
     />
     <MiniHost
       id={2}
+      key="2"
       name="Shimmeree"
       picture="https://i.imgur.com/P9srxtU.jpg"
     />
     <MiniHost
       id={3}
+      key="3"
       name="Rainbow Dash"
       picture="https://i.imgur.com/GJthKTQ.jpg"
     />

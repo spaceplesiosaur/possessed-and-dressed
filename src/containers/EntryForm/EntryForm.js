@@ -4,9 +4,7 @@ import './EntryForm.scss';
 import MiniHost from '../MiniHost/MiniHost';
 import { connect } from 'react-redux';
 import { chooseHost } from '../../actions/index.js';
-// import { setCategories } from '../../actions/index.js';
-// import { setAllColors } from '../../actions/index.js';
-// import { getInfo } from '../../util/apiCalls';
+import PropTypes from 'prop-types';
 
 export class EntryForm extends Component {
   constructor() {
@@ -23,6 +21,7 @@ export class EntryForm extends Component {
     return this.props.hostList.map(host => {
       return (
         <MiniHost
+          key={host.id}
           picture={host.picture}
           name={host.name}
           id={host.id}
@@ -47,28 +46,6 @@ export class EntryForm extends Component {
     this.state.error &&
     this.setState({inputClass: {input: "entryForm-hostName-inputError", text: ".entryForm-error-text"}})
   }
-
-  // supplyColorCategories = () => {
-  //   console.log('I ran')
-  //   getInfo('https://color-seasons.herokuapp.com/categories/', 'color categories')
-  //   .then(data => this.props.storeCategories(data))
-  //   // .then(data => console.log(data))
-  // }
-  //
-  // supplyHexCodes = () => {
-  //   console.log('I ran')
-  //   getInfo('https://color-seasons.herokuapp.com/colors/', 'colors and hex codes')
-  //   .then(data => {debugger
-  //     this.props.storeAllColors(data)})
-  //   // .then(data => console.log(data))
-  // }
-  //
-  // supplySeasons = () => {
-  //   console.log('I ran')
-  //   getInfo('https://color-seasons.herokuapp.com/seasons/', 'seasonal analysis')
-  //   .then(data => this.props.storeSeasons(data))
-  //   // .then(data => console.log(data))
-  // }
 
   handleClick = async () => {
     if (this.findHost() === 'error' || this.state.hostName === "") {
@@ -112,7 +89,11 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   chooseAHost: hostInfo => dispatch(chooseHost(hostInfo)),
-  // storeCategories: categoriesInfo => dispatch(setCategories(categoriesInfo)),
-  // storeAllColors: colorsInfo => dispatch(setAllColors(colorsInfo))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(EntryForm)
+
+EntryForm.propTypes = {
+  hostList: PropTypes.array,
+  host: PropTypes.object,
+  chooseColor: PropTypes.func
+}

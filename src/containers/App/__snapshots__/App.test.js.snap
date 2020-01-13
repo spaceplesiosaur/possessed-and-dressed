@@ -4,20 +4,26 @@ exports[`App should render App with correct data 1`] = `
 <main
   className="app"
 >
-  <Route
-    exact={true}
-    path="/"
-    render={[Function]}
-  />
-  <Route
-    exact={true}
-    path="/hosts/:id"
-    render={[Function]}
-  />
-  <Route
-    exact={true}
-    path="/hosts/:id/:colorName"
-    render={[Function]}
-  />
+  <Switch>
+    <Route
+      exact={true}
+      path="/"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      path="/hosts/:id"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      path="/hosts/:id/:colorName"
+      render={[Function]}
+    />
+    <Route
+      path="*"
+      render={[Function]}
+    />
+  </Switch>
 </main>
 `;

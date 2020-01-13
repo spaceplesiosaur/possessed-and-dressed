@@ -22,6 +22,7 @@ exports[`ColorChooser should render with the correct data 1`] = `
     <li
       className="colorList-box"
       id="astros"
+      key="45"
       onClick={[Function]}
       style={
         Object {
@@ -32,6 +33,7 @@ exports[`ColorChooser should render with the correct data 1`] = `
     <li
       className="colorList-box"
       id="burnt orange"
+      key="44"
       onClick={[Function]}
       style={
         Object {
@@ -42,6 +44,7 @@ exports[`ColorChooser should render with the correct data 1`] = `
     <li
       className="colorList-box"
       id="tangelo"
+      key="43"
       onClick={[Function]}
       style={
         Object {

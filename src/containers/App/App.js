@@ -5,7 +5,8 @@ import EntryForm from '../EntryForm/EntryForm';
 import ColorBar from '../ColorBar/ColorBar';
 import HostPage from '../../components/HostPage/HostPage';
 import ColorFeedback from '../ColorFeedback/ColorFeedback';
-import ErrorPage from '../../components/404Page/404Page'
+import ErrorPage from '../../components/404Page/404Page';
+import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getInfo } from '../../util/apiCalls';
@@ -112,3 +113,11 @@ export const mapDispatchToProps = (dispatch) => ({
   storeSeasons: seasonData => dispatch(setSeasons(seasonData))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(App)
+
+App.propTypes = {
+  hostList: PropTypes.array,
+  seasonList: PropTypes.array,
+  chosenHost: PropTypes.object,
+  chosenColor: PropTypes.string,
+  hexList: PropTypes.array
+}

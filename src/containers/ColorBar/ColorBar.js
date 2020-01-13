@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ColorBar.scss';
 import ColorChooser from '../ColorChooser/ColorChooser';
+import PropTypes from 'prop-types';
 import { getInfo } from '../../util/apiCalls';
 import { connect } from 'react-redux';
 import { setCategories } from '../../actions/index.js';
@@ -9,7 +10,7 @@ import { setAllColors } from '../../actions/index.js';
 
 export class ColorBar extends Component {
   constructor({colorCategories, hexCodes}) {
-    super({colorCategories, hexCodes})
+    super()
     this.state = {
 
     }
@@ -58,6 +59,7 @@ export class ColorBar extends Component {
       return (
         decipherHues.every(color => color !== undefined) &&
         (<ColorChooser
+          key={category.id}
           colorName={category.name}
           hues={decipherHues}
           borderColor={colorBorder}
@@ -92,3 +94,11 @@ export const mapDispatchToProps = (dispatch) => ({
   // storeSeasons: (seasonsInfo) => dispatch(setSeasons(seasonsInfo))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(ColorBar)
+
+ColorBar.propTypes = {
+  colorCategories: PropTypes.array,
+  hexCodes: PropTypes.array,
+  seasons: PropTypes.array,
+  storeCategories: PropTypes.func,
+  storeAllColors: PropTypes.func
+}

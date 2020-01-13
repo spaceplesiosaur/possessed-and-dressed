@@ -42,6 +42,7 @@ exports[`ColorBar should render with the correct data 1`] = `
           },
         ]
       }
+      key="34"
     />
     <Connect(ColorChooser)
       borderColor="#F89C51"
@@ -68,6 +69,7 @@ exports[`ColorBar should render with the correct data 1`] = `
           },
         ]
       }
+      key="35"
     />
     <Connect(ColorChooser)
       borderColor="#E7C142"
@@ -94,6 +96,7 @@ exports[`ColorBar should render with the correct data 1`] = `
           },
         ]
       }
+      key="36"
     />
   </section>
 </section>

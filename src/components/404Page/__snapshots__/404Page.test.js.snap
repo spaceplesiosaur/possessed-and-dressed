@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with correct data 1`] = `
+<p
+  className="error-page"
+>
+  404 - This page is not found!
+</p>
+`;

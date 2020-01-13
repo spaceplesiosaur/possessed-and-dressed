@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import './ColorFeedback.scss'
-import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
+import './ColorFeedback.scss';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
 export const ColorFeedback = ({match, chosenColor, chosenHost, season}) => {
 
@@ -26,3 +27,8 @@ export const mapStateToProps = (state) => ({
   chosenHost: state.chosenHost
 })
 export default connect(mapStateToProps, null)(ColorFeedback)
+
+ColorFeedback.propTypes = {
+  chosenColor: PropTypes.func,
+  chooseColor: PropTypes.string
+}
