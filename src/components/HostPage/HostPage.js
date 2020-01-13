@@ -4,7 +4,7 @@ import './HostPage.scss'
 export const HostPage = ({host}) => {
   return (
     <section className="hostPage-main-frame">
-      <p>Name: {host.name} Season: {host.season}</p>
+      <p className="host-name-tag">Meet {host.name}! He is very excited to be possessed by you.</p>
       <img className="hostPage-picture-host" src={host.picture}></img>
     </section>
   )

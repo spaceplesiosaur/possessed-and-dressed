@@ -72,6 +72,7 @@ export class App extends Component {
           return (
             selectedHost && (
               <>
+                <Header />
                 <HostPage host={selectedHost}/>
                 <ColorBar />
               </>

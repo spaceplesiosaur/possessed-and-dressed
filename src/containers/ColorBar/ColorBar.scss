@@ -1,3 +1,7 @@
+$dark-text-color: #282c34;
+$bright-header-color: #FA1E88;
+$dark-subHeader-color: #541A8B;
+
 .colorBar-main-frame {
   display: flex;
   flex-direction: column;
@@ -9,4 +13,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.colorBar-main-header {
+  color: $dark-text-color;
+  margin: 3rem;
+  font-size: 2rem;
 }
