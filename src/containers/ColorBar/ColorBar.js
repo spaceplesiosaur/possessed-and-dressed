@@ -55,11 +55,6 @@ export class ColorBar extends Component {
       const colorBorder = this.findMenuParentColor(colorTitles, category.name)
       const decipherHues = this.matchAvailableHuesToList(category.colors)
 
-      // console.log('HUES', decipherHues)
-      // console.log('COLOR NAME', category.name)
-      // console.log('BORDER COLOR', colorBorder)
-      // console.log('HUES', decipherHues.hex_code)
-
       return (
         decipherHues.every(color => color !== undefined) &&
         (<ColorChooser

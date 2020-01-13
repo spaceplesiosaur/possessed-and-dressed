@@ -1,6 +1,37 @@
-.colorFeedback-main-colorBox {
+$dark-text-color: #282c34;
+$bright-header-color: #FA1E88;
+$dark-subHeader-color: #541A8B;
+
+.colorFeedback-main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorFeedback-main-colorBox {
+  margin: 3rem;
   height: 200px;
   width: 200px;
+  border: 1px solid $dark-text-color
+}
+
+.colorFeedback-main-feedback {
+  color: $dark-text-color;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-left: 8em;
+  margin-right: 8em;
+}
+
+.back-button {
+  max-height: 55px;
+  height: 5em;
+  width: 9em;
+  border-radius: 5px;
+  margin: 2em;
+  font-size: 1.5em;
+  background-color: $bright-header-color;
+  color: $dark-subHeader-color;
+  font-weight: bold;
 }
