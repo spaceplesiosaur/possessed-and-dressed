@@ -9,5 +9,15 @@ exports[`App should render App with correct data 1`] = `
     path="/"
     render={[Function]}
   />
+  <Route
+    exact={true}
+    path="/hosts/:id"
+    render={[Function]}
+  />
+  <Route
+    exact={true}
+    path="/hosts/:id/:colorName"
+    render={[Function]}
+  />
 </main>
 `;

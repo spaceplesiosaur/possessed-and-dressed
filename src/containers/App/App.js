@@ -36,10 +36,14 @@ export class App extends Component {
     // .then(data => console.log(data))
   }
 
-  determineMatch = () => {
-    const hostSeason = this.props.seasonList.find(season => {
+  determineHostSeason = () => {
+    return this.props.seasonList.find(season => {
       return season.id === this.props.chosenHost.season
     })
+  }
+
+  determineMatch = () => {
+    const hostSeason = this.determineHostSeason()
 
     console.log('HOST SEASON', hostSeason)
     const isAMatch = hostSeason.colors.includes(this.props.chosenColor.id)
@@ -83,6 +87,7 @@ export class App extends Component {
             <Header />
             <ColorFeedback
               match={this.determineMatch()}
+              season={this.determineHostSeason().name}
             />
             </>
           )

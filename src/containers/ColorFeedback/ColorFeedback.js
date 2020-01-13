@@ -2,11 +2,11 @@ import React from 'react';
 import './ColorFeedback.scss'
 import { connect } from 'react-redux'
 
-export const ColorFeedback = ({match, chosenColor, chosenHost}) => {
+export const ColorFeedback = ({match, chosenColor, chosenHost, season}) => {
 
   const determineFeedback = () => {
     return (!match)
-      ? (<p>No! Your host's season is {`${chosenHost.season}`}. The color {`${chosenColor.name}`} will make them look tired, sad and afraid, and someone will try to perform an exorcism on them!</p>)
+      ? (<p>No! Your host's season is {`${season}`}. The color {`${chosenColor.name}`} will make them look tired, sad and afraid, and someone will try to perform an exorcism on them!</p>)
       : (<p>Yes! Your host's season is {`${chosenHost.season}`}. The color {`${chosenColor.name}`} will look great on them - nobody will suspect a thing!</p>)
   }
   return (
