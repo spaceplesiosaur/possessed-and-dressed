@@ -9,6 +9,8 @@ describe('ColorFeedback', () => {
   let mockHostSeason
 
   beforeEach(() => {
+    // toUpperCase = jest.fn()
+
     mockChosenColor = {
         id: 35,
         name: "neon strawberry",
@@ -38,7 +40,7 @@ describe('ColorFeedback', () => {
       match={true}
       chosenColor={mockChosenColor}
       chosenHost={mockChosenHost}
-      season={mockHostSeason}
+      season={"winter"}
       />)
   })
 
@@ -51,7 +53,7 @@ describe('ColorFeedback', () => {
       match={false}
       chosenColor={mockChosenColor}
       chosenHost={mockChosenHost}
-      season={mockHostSeason}
+      season={"winter"}
       />)
     expect(wrapper).toMatchSnapshot()
   })

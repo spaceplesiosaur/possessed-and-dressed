@@ -169,7 +169,7 @@ describe('ColorBar', () => {
   })
 
   it('should call matchAvailableHuesToList and findMenuParentColor when displayColorBar runs', () => {
-    const colorTitles = [{red: '#F87E97'}, {orange: '#F89C51'}, {yellow: '#E7C142'}, {green: '#A7C65F'}, {blue: '#5DA1DA'}, {violet: '#5C50B6'}, {pink: '#DE92DA'}, {neutral: '#E2E2E3'}]
+    let colorTitles = [{red: '#F87E97'}, {orange: '#F89C51'}, {yellow: '#E7C142'}, {green: '#A7C65F'}, {blue: '#5DA1DA'}, {violet: '#5C50B6'}, {pink: '#DE92DA'}, {neutral: '#E2E2E3'}]
 
     const orangeList = [{
         id: 45,

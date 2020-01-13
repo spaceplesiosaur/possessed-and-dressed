@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { EntryForm, mapStateToProps, mapDispatchToProps } from './EntryForm';
 import { chooseHost } from '../../actions/index.js';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 
 describe('EntryForm', () => {
   let wrapper;

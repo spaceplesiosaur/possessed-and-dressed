@@ -121,25 +121,25 @@ describe('ColorChooser', () => {
 
   it('should change the listDisplay state to hidden if open is toggled to false when handleMenuClick is run', async () => {
     wrapper.instance().setState({open: true})
-    wrapper.instance().toggleListDisplay = await jest.fn().mockImplementation(() => {
+    wrapper.instance().toggleListDisplay = jest.fn().mockImplementation(() => {
       return wrapper.instance().setState({open: false})
     })
     wrapper.instance().forceUpdate()
-    wrapper.instance().handleMenuClick()
+    await wrapper.instance().handleMenuClick()
     expect(wrapper.instance().state.listDisplay).toEqual('hidden')
 
   })
 
-  // it('should change the listDisplay state to colorList-hues if open is toggled to false when handleMenuClick is run', async () => {
-  //   wrapper.instance().setState({open: false})
-  //   wrapper.instance().toggleListDisplay = await jest.fn().mockImplementation(() => {
-  //     return wrapper.instance().setState({open: true})
-  //   })
-  //   wrapper.instance().forceUpdate()
-  //   wrapper.instance().handleMenuClick()
-  //   expect(wrapper.instance().state.listDisplay).toEqual('colorList-hues')
-  //
-  // })
+  it('should change the listDisplay state to colorList-hues if open is toggled to false when handleMenuClick is run', async () => {
+    wrapper.instance().setState({open: false})
+    wrapper.instance().toggleListDisplay = jest.fn().mockImplementation(() => {
+      return wrapper.instance().setState({open: true})
+    })
+    wrapper.instance().forceUpdate()
+    await wrapper.instance().handleMenuClick()
+    expect(wrapper.instance().state.listDisplay).toEqual('colorList-hues')
+
+  })
 
   it('should return an array of list items the same length as the hues property', () => {
     expect(wrapper.instance().hydrateColorList()).toHaveLength(3)

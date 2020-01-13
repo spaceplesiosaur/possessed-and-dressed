@@ -5,7 +5,7 @@ exports[`MiniHost should render with the correct data 1`] = `
   className="entryPage-miniHost-hostAvatar"
 >
   <img
-    alt="host-image-screaming"
+    alt="host-screaming"
     className="host-avatar-picture"
     src="picture url"
   />

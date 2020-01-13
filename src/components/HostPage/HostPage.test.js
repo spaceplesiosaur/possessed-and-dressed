@@ -12,6 +12,6 @@ describe('HostPage', () => {
     }
     const wrapper = shallow(<HostPage host={mockHost}/>)
 
-    expect(wrapper).toMatchSnapshot
+    expect(wrapper).toMatchSnapshot()
   })
 })

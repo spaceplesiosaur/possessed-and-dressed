@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render with correct data 1`] = `
-<header
-  className="app-header"
+<Link
+  to="/"
 >
-  Posessed & Dressed
-</header>
+  <header
+    className="app-header"
+  >
+    Posessed & Dressed
+  </header>
+</Link>
 `;

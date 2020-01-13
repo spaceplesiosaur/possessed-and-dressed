@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HostPage should render with correct data 1`] = `
+<section
+  className="hostPage-main-frame"
+>
+  <p
+    className="host-name-tag"
+  >
+    Meet 
+    Blucifer
+    ! 
+    Blucifer
+     is very excited to be possessed by you.
+  </p>
+  <img
+    alt="hostPage-main-hostPic"
+    className="hostPage-picture-host"
+    src="https://i.imgur.com/I5MqMUV.jpg"
+  />
+</section>
+`;

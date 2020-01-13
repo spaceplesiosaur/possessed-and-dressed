@@ -4,9 +4,9 @@ import './EntryForm.scss';
 import MiniHost from '../MiniHost/MiniHost';
 import { connect } from 'react-redux';
 import { chooseHost } from '../../actions/index.js';
-import { setCategories } from '../../actions/index.js';
-import { setAllColors } from '../../actions/index.js';
-import { getInfo } from '../../util/apiCalls';
+// import { setCategories } from '../../actions/index.js';
+// import { setAllColors } from '../../actions/index.js';
+// import { getInfo } from '../../util/apiCalls';
 
 export class EntryForm extends Component {
   constructor() {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import { getInfo } from '../../util/apiCalls.js';
@@ -222,7 +221,7 @@ describe('App', () => {
         storeSeasons={jest.fn()}
       />)
 
-    const spy = jest.spyOn(wrapper.instance(), 'determineHostSeason').mockImplementation(() => {
+    jest.spyOn(wrapper.instance(), 'determineHostSeason').mockImplementation(() => {
       return (
         {
             id: 9,
