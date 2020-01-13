@@ -37,11 +37,14 @@ Audience:  Ghosts trying to dress their hosts in appropriate colors for their sk
 
 All user images taken from Shutterstock.  All names taken from a random name generator. Any name/user combo is pure coincidence.
 
+Ghost background from https://hipwallpaper.com/awesome-ghost-wallpapers/
+Rainbow background from unknown source, found at  https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.rcboe.org%2F%2Fcms%2Flib%2FGA01903614%2FCentricity%2FPage%2F39814%2Frainbow.jpg&imgrefurl=https%3A%2F%2Fwww.rcboe.org%2Fdomain%2F10787&docid=w5-jObIO3gQNrM&tbnid=GSRmf0sEgGu1NM%3A&vet=1&w=800&h=445&bih=707&biw=1389&ved=2ahUKEwiDkd3rovzmAhXsna0KHXqxDoIQxiAoCXoECAEQMw&iact=c&ictx=1
+
 ## Demo
 
 
 
-![Possessed and Dressed App](https://media.giphy.com/media/frGswM2BHc8BVhETdw/giphy.gif)
+![Possessed and Dressed App](https://media.giphy.com/media/H6z02AcPLN2d2j2zzB/giphy.gif)
 
 
 
