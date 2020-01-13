@@ -81,11 +81,11 @@ export class App extends Component {
         <Route exact path='/hosts/:id/:colorName' render={(match) => {
           return (
             <>
-            <Header />
-            <ColorFeedback
-              match={this.determineMatch()}
-              season={this.determineHostSeason().name}
-            />
+              <Header />
+              <ColorFeedback
+                match={this.determineMatch()}
+                season={this.determineHostSeason().name}
+              />
             </>
           )
         }}/>

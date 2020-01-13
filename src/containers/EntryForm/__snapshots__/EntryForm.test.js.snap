@@ -5,3 +5,64 @@ exports[`EntryForm should render with the correct properites 1`] = `
   to="/hosts/1"
 />
 `;
+
+exports[`EntryForm should render with the correct properites when there is not a defined chosen user 1`] = `
+<section
+  className="app-entryForm"
+>
+  <h2>
+    Welcome!  Choose the person you would like to possess
+  </h2>
+  <div
+    className="entryForm-hostName-inputSet"
+  >
+    <div
+      className="entryForm-hostName-styling"
+    >
+      <label
+        className="entryForm-hostName-label"
+        htmlFor="hostName"
+      >
+        Chosen Host:
+      </label>
+      <input
+        className="entryForm-hostName-input"
+        id="hostName-input"
+        name="hostName"
+        onChange={[Function]}
+      />
+      <button
+        className="choose-host-button"
+        id="hostName-button"
+        onClick={[Function]}
+      >
+        Dress & Possess!
+      </button>
+    </div>
+    <p
+      className="hidden"
+    >
+      Only enter a name from the list!
+    </p>
+  </div>
+  <section
+    className="app-entryForm-hostList"
+  >
+    <MiniHost
+      id={1}
+      name="Blucifer"
+      picture="https://i.imgur.com/I5MqMUV.jpg"
+    />
+    <MiniHost
+      id={2}
+      name="Shimmeree"
+      picture="https://i.imgur.com/P9srxtU.jpg"
+    />
+    <MiniHost
+      id={3}
+      name="Rainbow Dash"
+      picture="https://i.imgur.com/GJthKTQ.jpg"
+    />
+  </section>
+</section>
+`;

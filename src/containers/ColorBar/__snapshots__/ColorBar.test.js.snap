@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorBar should render with the correct data 1`] = `
+<section
+  className="colorBar-main-frame"
+>
+  <h2>
+    What color would you like your host to wear?
+  </h2>
+  <section
+    className="colorBar-frame-navBar"
+  >
+    <Connect(ColorChooser)
+      borderColor="#F87E97"
+      colorName="red"
+      hues={
+        Array [
+          Object {
+            "category": 34,
+            "hex_code": "#C40C42",
+            "id": 34,
+            "name": "berry",
+          },
+          Object {
+            "category": 34,
+            "hex_code": "#F6003C",
+            "id": 35,
+            "name": "neon strawberry",
+          },
+          Object {
+            "category": 34,
+            "hex_code": "#e21a24",
+            "id": 36,
+            "name": "brick",
+          },
+        ]
+      }
+    />
+    <Connect(ColorChooser)
+      borderColor="#F89C51"
+      colorName="orange"
+      hues={
+        Array [
+          Object {
+            "category": 35,
+            "hex_code": "#ff6100",
+            "id": 45,
+            "name": "astros",
+          },
+          Object {
+            "category": 35,
+            "hex_code": "#e5732f",
+            "id": 44,
+            "name": "burnt orange",
+          },
+          Object {
+            "category": 35,
+            "hex_code": "#FF9500",
+            "id": 43,
+            "name": "tangelo",
+          },
+        ]
+      }
+    />
+    <Connect(ColorChooser)
+      borderColor="#E7C142"
+      colorName="yellow"
+      hues={
+        Array [
+          Object {
+            "category": 36,
+            "hex_code": "#F8DF3A",
+            "id": 50,
+            "name": "sunshine",
+          },
+          Object {
+            "category": 36,
+            "hex_code": "#F8F173",
+            "id": 51,
+            "name": "canary",
+          },
+          Object {
+            "category": 36,
+            "hex_code": "#F5FCA5",
+            "id": 52,
+            "name": "light acid",
+          },
+        ]
+      }
+    />
+  </section>
+</section>
+`;

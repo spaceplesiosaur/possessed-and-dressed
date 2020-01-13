@@ -48,6 +48,15 @@ describe('EntryForm', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('should render with the correct properites when there is not a defined chosen user', () => {
+    const wrapper = shallow(<EntryForm
+        hostList={mockHosts}
+        host={{}}
+        chooseAHost={jest.fn()}
+      />)
+    expect(wrapper).toMatchSnapshot();
+  })
+
   it('should have the correct number of host components when it renders', () => {
     const wrapper = shallow(<EntryForm
         hostList={mockHosts}
