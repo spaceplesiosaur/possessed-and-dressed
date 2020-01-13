@@ -35,6 +35,8 @@ Audience:  Ghosts trying to dress their hosts in appropriate colors for their sk
 - React
 - Redux
 
+All user images taken from Shutterstock.  All names taken from a random name generator. Any name/user combo is pure coincidence.
+
 ## Demo
 
 
