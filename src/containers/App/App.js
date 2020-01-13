@@ -30,7 +30,6 @@ export class App extends Component {
   }
 
   supplySeasons = () => {
-    console.log('I ran')
     getInfo('https://color-seasons.herokuapp.com/seasons/', 'seasonal analysis')
     .then(data => this.props.storeSeasons(data))
     // .then(data => console.log(data))
@@ -45,7 +44,6 @@ export class App extends Component {
   determineMatch = () => {
     const hostSeason = this.determineHostSeason()
 
-    console.log('HOST SEASON', hostSeason)
     const isAMatch = hostSeason.colors.includes(this.props.chosenColor.id)
     // const isAMatch = hostSeason.colors.includes(colorID => {
     //   console.log('colorID from host season', colorID)
@@ -81,7 +79,6 @@ export class App extends Component {
           )
         }}/>
         <Route exact path='/hosts/:id/:colorName' render={(match) => {
-          console.log('MATCH', match)
           return (
             <>
             <Header />
