@@ -42,7 +42,7 @@ export class ColorChooser extends Component {
       this.props.chosenColor !== "" ?
       <Redirect to={`/hosts/${this.props.chosenHost.id}/${this.props.chosenColor.name}`} /> :
       <div className="colorChooser-colorDropdown-widget">
-        <h4 className="colorList-box" style={{border: `10px solid ${this.props.borderColor}`}} onClick={this.handleMenuClick}>{this.props.colorName}</h4>
+        <h4 className="colorList-box" style={{border: `10px solid ${this.props.borderColor}`}} onClick={this.handleMenuClick} id="menu-header">{this.props.colorName}</h4>
         <ul className={this.state.listDisplay}>
           {this.hydrateColorList()}
         </ul>

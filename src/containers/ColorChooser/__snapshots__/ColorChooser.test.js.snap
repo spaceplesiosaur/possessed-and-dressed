@@ -6,6 +6,7 @@ exports[`ColorChooser should render with the correct data 1`] = `
 >
   <h4
     className="colorList-box"
+    id="menu-header"
     onClick={[Function]}
     style={
       Object {
