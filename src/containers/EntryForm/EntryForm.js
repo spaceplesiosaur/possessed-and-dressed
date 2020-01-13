@@ -46,7 +46,6 @@ export class EntryForm extends Component {
   handleError = () => {
     this.state.error &&
     this.setState({inputClass: {input: "entryForm-hostName-inputError", text: ".entryForm-error-text"}})
-
   }
 
   // supplyColorCategories = () => {
@@ -93,8 +92,8 @@ export class EntryForm extends Component {
         <div className="entryForm-hostName-inputSet">
           <div className="entryForm-hostName-styling">
             <label htmlFor="hostName" className="entryForm-hostName-label">Chosen Host:</label>
-            <input name="hostName" className={this.state.inputClass.input} onChange={this.handleChange}></input>
-            <button className="choose-host-button" onClick={this.handleClick}>Dress & Possess!</button>
+            <input name="hostName" id="hostName-input" className={this.state.inputClass.input} onChange={this.handleChange}></input>
+            <button className="choose-host-button" onClick={this.handleClick} id="hostName-button">Dress & Possess!</button>
           </div>
           <p className={this.state.inputClass.text}>Only enter a name from the list!</p>
         </div>

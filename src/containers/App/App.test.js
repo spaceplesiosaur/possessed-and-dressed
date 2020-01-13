@@ -186,7 +186,7 @@ describe('App', () => {
   })
 
   it('should return false when the chosen color is NOT in the chosen host/s season array', () => {
-    const spy = jest.spyOn(wrapper.instance(), 'determineHostSeason').mockImplementation(() => {
+    jest.spyOn(wrapper.instance(), 'determineHostSeason').mockImplementation(() => {
       return (
         {
             id: 9,
