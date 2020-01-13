@@ -54,7 +54,7 @@ describe('getInfo', () => {
   //   let options = mockOptions
   //   expect(getInfo('https://color-seasons.herokuapp.com/hosts/', 'hosts')).resolves.toEqual(mockData)
   // })
-  //
+
   it('should throw an error when the response is not ok', () => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
