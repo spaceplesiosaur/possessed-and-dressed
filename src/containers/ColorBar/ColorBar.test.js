@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ColorBar } from './ColorBar';
+import { ColorBar, mapStateToProps, mapDispatchToProps } from './ColorBar';
 import { getInfo } from '../../util/apiCalls';
 import { setCategories } from '../../actions/index.js';
 import { setAllColors } from '../../actions/index.js';
@@ -275,5 +275,116 @@ describe('ColorBar', () => {
     console.log(wrapper.debug())
 
     expect(wrapper.find('Connect(ColorChooser)')).toHaveLength(0)
+  })
+
+  describe('mapStateToProps', () => {
+    it('should return the correct data from the state', () => {
+      const mockState = {
+        hosts: [
+        {
+            id: 1,
+            name: "Blucifer",
+            picture: "https://i.imgur.com/I5MqMUV.jpg",
+            season: 9
+        },
+        {
+            id: 2,
+            name: "Shimmeree",
+            picture: "https://i.imgur.com/P9srxtU.jpg",
+            season: 6
+        },
+        {
+            id: 3,
+            name: "Rainbow Dash",
+            picture: "https://i.imgur.com/GJthKTQ.jpg",
+            season: 6
+        }
+        ],
+        chosenHost: {
+            id: 1,
+            name: "Blucifer",
+            picture: "https://i.imgur.com/I5MqMUV.jpg",
+            season: 9
+        },
+        categories: mockColorCategories,
+        seasons: [
+        {
+            id: 9,
+            name: "winter",
+            colors: [
+                34,
+                35,
+                36,
+                52,
+            ]
+        },
+        {
+            id: 7,
+            name: "spring",
+            colors: [
+                36,
+                37,
+                39,
+                41,
+                44
+            ]
+        }
+      ],
+        allColors: mockHexCodes,
+        chosenColor: {
+            id: 50,
+            name: "sunshine",
+            hex_code: "#F8DF3A",
+            category: 36
+        }
+      }
+
+      const expected = {
+        colorCategories: mockColorCategories,
+        hexCodes: mockHexCodes,
+        seasons: [
+        {
+            id: 9,
+            name: "winter",
+            colors: [
+                34,
+                35,
+                36,
+                52,
+            ]
+        },
+        {
+            id: 7,
+            name: "spring",
+            colors: [
+                36,
+                37,
+                39,
+                41,
+                44
+            ]
+        }
+      ]
+      }
+
+      expect(mapStateToProps(mockState)).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with setCategories when storeCategores is called', () => {
+      const mockDispatch = jest.fn()
+
+      mapDispatchToProps(mockDispatch).storeCategories([{}, {}])
+
+      expect(mockDispatch).toHaveBeenCalledWith(setCategories([{}, {}]))
+    })
+    it('calls dispatch with setAllColors when storeAllColors is called', () => {
+      const mockDispatch = jest.fn()
+
+      mapDispatchToProps(mockDispatch).storeAllColors([{}, {}])
+
+      expect(mockDispatch).toHaveBeenCalledWith(setAllColors([{}, {}]))
+    })
   })
 })

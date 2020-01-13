@@ -1,5 +1,6 @@
 import React from 'react';
-import { ColorChooser } from './ColorChooser';
+import { ColorChooser, mapStateToProps, mapDispatchToProps } from './ColorChooser';
+import { chooseColor } from '../../actions/index.js';
 import { shallow } from 'enzyme';
 
 describe('ColorChooser', () => {
@@ -142,5 +143,83 @@ describe('ColorChooser', () => {
 
   it('should return an array of list items the same length as the hues property', () => {
     expect(wrapper.instance().hydrateColorList()).toHaveLength(3)
+  })
+
+  describe('mapStateToProps', () => {
+    it('should return the correct data from the state', () => {
+      const mockState = {
+        hosts: mockChosenHost,
+        chosenHost: mockChosenHost,
+        categories: [{
+            id: 34,
+            name: "red",
+            colors: [
+                34,
+                35,
+                36
+            ]
+        },
+        {
+            id: 35,
+            name: "orange",
+            colors: [
+                45,
+                44,
+                43
+            ]
+        },
+        {
+            id: 36,
+            name: "yellow",
+            colors: [
+                50,
+                51,
+                52
+            ]
+        }],
+        seasons: [
+        {
+            id: 9,
+            name: "winter",
+            colors: [
+                34,
+                35,
+                36,
+                52,
+            ]
+        },
+        {
+            id: 7,
+            name: "spring",
+            colors: [
+                36,
+                37,
+                39,
+                41,
+                44
+            ]
+        }
+      ],
+        allColors: mockHues,
+        chosenColor: mockChosenColor
+      }
+
+      const expected = {
+        chosenHost: mockChosenHost,
+        chosenColor: mockChosenColor
+      }
+
+      expect(mapStateToProps(mockState)).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with chooseColor when props.chooseColor is called', () => {
+      const mockDispatch = jest.fn()
+
+      mapDispatchToProps(mockDispatch).chooseColor([{}, {}])
+
+      expect(mockDispatch).toHaveBeenCalledWith(chooseColor([{}, {}]))
+    })
   })
 })

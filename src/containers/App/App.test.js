@@ -4,7 +4,8 @@ import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import { getInfo } from '../../util/apiCalls.js';
 import { setHosts } from '../../actions/index.js';
-import { App } from './App';
+import { setSeasons } from '../../actions/index.js';
+import { App, mapStateToProps, mapDispatchToProps } from './App';
 
 jest.mock('../../util/apiCalls.js');
 
@@ -239,6 +240,69 @@ describe('App', () => {
   })
 
   describe('mapStateToProps', () => {
-    
+    it('should return the correct data from the state', () => {
+      const mockState = {
+        hosts: mockHosts,
+        chosenHost: mockChosenHost,
+        categories: [{
+            id: 34,
+            name: "red",
+            colors: [
+                34,
+                35,
+                36
+            ]
+        },
+        {
+            id: 35,
+            name: "orange",
+            colors: [
+                45,
+                44,
+                43
+            ]
+        },
+        {
+            id: 36,
+            name: "yellow",
+            colors: [
+                50,
+                51,
+                52
+            ]
+        }],
+        seasons: mockSeasons,
+        allColors: mockHexList,
+        chosenColor: mockChosenColor
+      }
+
+      const expected = {
+        hostList: mockHosts,
+        seasonList: mockSeasons,
+        chosenHost: mockChosenHost,
+        chosenColor: mockChosenColor,
+        hexList: mockHexList
+      }
+
+      expect(mapStateToProps(mockState)).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with setHosts when storeHosts is called', () => {
+      const mockDispatch = jest.fn()
+
+      mapDispatchToProps(mockDispatch).storeHosts([{}, {}])
+
+      expect(mockDispatch).toHaveBeenCalledWith(setHosts([{}, {}]))
+    })
+
+    it('calls dispatch with setSeasonss when storeSeasons is called', () => {
+      const mockDispatch = jest.fn()
+
+      mapDispatchToProps(mockDispatch).storeSeasons([{}, {}])
+
+      expect(mockDispatch).toHaveBeenCalledWith(setSeasons([{}, {}]))
+    })
   })
 })

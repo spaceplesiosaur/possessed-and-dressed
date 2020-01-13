@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { EntryForm } from './EntryForm';
+import { EntryForm, mapStateToProps, mapDispatchToProps } from './EntryForm';
+import { chooseHost } from '../../actions/index.js';
 import { Provider } from 'react-redux';
 
 describe('EntryForm', () => {
@@ -9,7 +10,7 @@ describe('EntryForm', () => {
   let mockChosenHost
 
   beforeEach(() => {
-    mockHosts = mockHosts = [
+    mockHosts = [
     {
         id: 1,
         name: "Blucifer",
@@ -176,5 +177,83 @@ describe('EntryForm', () => {
     wrapper.instance().handleClick()
 
     expect(wrapper.instance().props.chooseAHost).toHaveBeenCalledWith('Shimmeree')
+  })
+
+  describe('mapStateToProps', () => {
+    it('should return the correct data from the state', () => {
+      const mockState = {
+        hosts: mockHosts,
+        chosenHost: mockChosenHost,
+        categories: [{
+            id: 34,
+            name: "red",
+            colors: [
+                34,
+                35,
+                36
+            ]
+        },
+        {
+            id: 35,
+            name: "orange",
+            colors: [
+                45,
+                44,
+                43
+            ]
+        },
+        {
+            id: 36,
+            name: "yellow",
+            colors: [
+                50,
+                51,
+                52
+            ]
+        }],
+        seasons: [
+        {
+            id: 9,
+            name: "winter",
+            colors: [
+                34,
+                35,
+                36,
+                52,
+            ]
+        },
+        {
+            id: 7,
+            name: "spring",
+            colors: [
+                36,
+                37,
+                39,
+                41,
+                44
+            ]
+        }
+      ],
+        allColors: [{}, {}, {}],
+        chosenColor: {}
+      }
+
+      const expected = {
+        hostList: mockHosts,
+        host: mockChosenHost
+      }
+
+      expect(mapStateToProps(mockState)).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with chooseHost when props.chooseAHost is called', () => {
+      const mockDispatch = jest.fn()
+
+      mapDispatchToProps(mockDispatch).chooseAHost({})
+
+      expect(mockDispatch).toHaveBeenCalledWith(chooseHost({}))
+    })
   })
 })
