@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MiniHost should render with the correct data 1`] = `
+<div
+  className="entryPage-miniHost-hostAvatar"
+>
+  <img
+    alt="host-image-screaming"
+    className="host-avatar-picture"
+    src="picture url"
+  />
+  <p
+    className="host-avatar-name"
+  >
+    Blucifer
+  </p>
+</div>
+`;

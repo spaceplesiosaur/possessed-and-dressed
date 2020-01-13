@@ -1,0 +1,21 @@
+.hidden {
+  display: none;
+}
+.colorChooser-colorDropdown-widget {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.colorList-box {
+  width: 8em;
+  margin-left: 2em;
+  background-color: white;
+}
+
+.colorList-hues {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: circle;
+}

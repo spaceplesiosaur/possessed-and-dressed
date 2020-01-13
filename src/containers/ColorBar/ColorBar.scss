@@ -1,0 +1,28 @@
+$dark-text-color: #282c34;
+$bright-header-color: #FA1E88;
+$dark-subHeader-color: #541A8B;
+
+.colorBar-main-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorBar-frame-navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.colorBar-main-header {
+  color: $dark-text-color;
+  margin: 1rem;
+  font-size: 2.75rem;
+}
+
+.colorBar-main-explantion {
+  color: $dark-text-color;
+  margin: 2rem;
+  font-size: 2rem;
+}

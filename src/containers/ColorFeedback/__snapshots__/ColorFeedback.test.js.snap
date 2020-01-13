@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorFeedback should render with correct data when match is false 1`] = `
+<section
+  className="colorFeedback-main"
+>
+  <div
+    className="colorFeedback-main-colorBox"
+    style={
+      Object {
+        "backgroundColor": "#F6003C",
+      }
+    }
+  />
+  <h2
+    className="colorFeedback-main-name"
+  >
+    neon strawberry
+  </h2>
+  <p>
+    No! Your host's season is 
+    [object Object]
+    . The color 
+    neon strawberry
+     will make them look tired, sad and afraid, and someone will try to perform an exorcism on them!
+  </p>
+</section>
+`;
+
+exports[`ColorFeedback should render with correct data when match is true 1`] = `
+<section
+  className="colorFeedback-main"
+>
+  <div
+    className="colorFeedback-main-colorBox"
+    style={
+      Object {
+        "backgroundColor": "#F6003C",
+      }
+    }
+  />
+  <h2
+    className="colorFeedback-main-name"
+  >
+    neon strawberry
+  </h2>
+  <p>
+    Yes! Your host's season is 
+    [object Object]
+    . The color 
+    neon strawberry
+     will look great on them - nobody will suspect a thing!
+  </p>
+</section>
+`;

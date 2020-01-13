@@ -1,0 +1,94 @@
+$dark-text-color: #282c34;
+$bright-header-color: #FA1E88;
+$dark-subHeader-color: #541A8B;
+
+.hidden {
+  display: none;
+}
+.app-entryForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  color: $dark-text-color;
+  padding-top: 3rem;
+  padding-bottom: .5rem;
+}
+
+.entryForm-hostName-inputError {
+  border: 2px solid red;
+  border-radius: 5px;
+  width: 25rem;
+  height: 5em;
+  margin-left: .5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.entryForm-error-text {
+  // position: fixed;
+  // left: 20px;
+  // bottom: 10px;
+  background-color: white;
+  font-size: .5rem;
+  font-weight: bold;
+  color: red;
+}
+
+.entryForm-hostName-inputSet {
+  // position: absolute;
+  // text-align: center;
+  // left: 200px;
+  // right: 200px;
+  // top: 300px;
+  margin-top: 3rem;
+  background-color: white;
+    label {
+      align-self: flex-end;
+      color: $dark-text-color;
+      font-size: 3rem;
+      max-height: 55px;
+    }
+    input {
+      border-radius: 5px;
+      width: 25rem;
+      max-height: 55px;
+      margin-left: .5rem;
+      font-size: 1.5rem;
+    }
+    button {
+      max-height: 55px;
+      height: 5em;
+      width: 9em;
+      border-radius: 5px;
+      margin-left: .5em;
+      font-size: 1.5em;
+      background-color: $bright-header-color;
+      color: $dark-subHeader-color;
+      font-weight: bold;
+    }
+
+}
+
+.entryForm-hostName-styling {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.app-entryForm-hostList {
+  // background-image: url('../../images/ghost_background.jpg');
+  align-self: center;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 3em;
+}
+
+.choose-host-button {
+
+}
