@@ -164,7 +164,6 @@ describe('App', () => {
   })
 
   it('should call determineHostSeason when determineMatch is run', () => {
-
     const spy = jest.spyOn(wrapper.instance(), 'determineHostSeason').mockImplementation(() => {
       return (
         {
@@ -183,6 +182,26 @@ describe('App', () => {
     wrapper.instance().determineMatch()
 
     expect(spy).toHaveBeenCalled()
+
+    //ANOTHER WAY
+    // wrapper.instance().determineHostSeason = jest.fn().mockImplementation(() => {
+    //   return (
+    //       {
+    //           id: 9,
+    //           name: "winter",
+    //           colors: [
+    //               34,
+    //               35,
+    //               36,
+    //               52,
+    //           ]
+    //       }
+    //     )
+    // })
+    //
+    // wrapper.instance().determineMatch()
+    //
+    // expect(wrapper.instance().determineHostSeason).toHaveBeenCalled()
   })
 
   it('should return false when the chosen color is NOT in the chosen host/s season array', () => {
@@ -235,6 +254,8 @@ describe('App', () => {
         }
       )
     })
+
+    //OVerkill.  I should have NOT mocked out a different chosen color, and instead mocked out the result of the spy/  The function being spied on runs anyway and return sthe same thing!  Spies don't take the function out, btw.
     expect(wrapper.instance().determineMatch()).toEqual(true)
   })
 
