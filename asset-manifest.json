@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/possessed-and-dressed/static/css/main.13d07546.chunk.css",
+    "main.js": "/possessed-and-dressed/static/js/main.1441b014.chunk.js",
+    "main.js.map": "/possessed-and-dressed/static/js/main.1441b014.chunk.js.map",
+    "runtime-main.js": "/possessed-and-dressed/static/js/runtime-main.9ec8c8c0.js",
+    "runtime-main.js.map": "/possessed-and-dressed/static/js/runtime-main.9ec8c8c0.js.map",
+    "static/js/2.3056a990.chunk.js": "/possessed-and-dressed/static/js/2.3056a990.chunk.js",
+    "static/js/2.3056a990.chunk.js.map": "/possessed-and-dressed/static/js/2.3056a990.chunk.js.map",
+    "index.html": "/possessed-and-dressed/index.html",
+    "precache-manifest.f7423c0372cec9fe50278fb2b2d265ad.js": "/possessed-and-dressed/precache-manifest.f7423c0372cec9fe50278fb2b2d265ad.js",
+    "service-worker.js": "/possessed-and-dressed/service-worker.js",
+    "static/css/main.13d07546.chunk.css.map": "/possessed-and-dressed/static/css/main.13d07546.chunk.css.map",
+    "static/js/2.3056a990.chunk.js.LICENSE": "/possessed-and-dressed/static/js/2.3056a990.chunk.js.LICENSE",
+    "static/media/ColorFeedback.scss": "/possessed-and-dressed/static/media/ghost_background.55a9f072.jpg",
+    "static/media/ColorBar.scss": "/possessed-and-dressed/static/media/rainbow_background.b7cbe552.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ec8c8c0.js",
+    "static/js/2.3056a990.chunk.js",
+    "static/css/main.13d07546.chunk.css",
+    "static/js/main.1441b014.chunk.js"
+  ]
+}
