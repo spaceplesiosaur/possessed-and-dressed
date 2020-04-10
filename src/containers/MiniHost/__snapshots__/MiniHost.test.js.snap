@@ -7,7 +7,9 @@ exports[`MiniHost should render with the correct data 1`] = `
   <img
     alt="host-screaming"
     className="host-avatar-picture"
-    src="picture url"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    src="happy_pic_url"
   />
   <p
     className="host-avatar-name"
