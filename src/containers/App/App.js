@@ -86,10 +86,11 @@ export class App extends Component {
             </>
           )
         }}/>
-        <Route path='*' render={() => {
+        <Route path='*' render={({ match }) => {
           return (
             <>
               <Header />
+              <h1>{match}</h1>
               <ErrorPage />
             </>
           )
