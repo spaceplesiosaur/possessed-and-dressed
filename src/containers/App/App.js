@@ -52,7 +52,7 @@ export class App extends Component {
     return (
       <main className="app">
       <Switch>
-        <Route exact path='/' render={() => {
+        <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => {
           return (
             <>
               <Header />
@@ -60,7 +60,7 @@ export class App extends Component {
             </>
           )
         }} />
-        <Route exact path='/hosts/:id' render={(match) => {
+        <Route exact path={`${process.env.PUBLIC_URL}/hosts/:id`} render={(match) => {
           const selectedHost = this.props.hostList.find(host => {
             return host.id === parseInt(match.match.params.id)
           })
@@ -75,7 +75,7 @@ export class App extends Component {
             )
           )
         }}/>
-        <Route exact path='/hosts/:id/:colorName' render={(match) => {
+        <Route exact path={`${process.env.PUBLIC_URL}/hosts/:id/:colorName`} render={(match) => {
           return (
             <>
               <Header />
