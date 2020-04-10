@@ -25,6 +25,8 @@ export class EntryForm extends Component {
           picture={host.picture}
           happy_pic={host.happy_picture}
           name={host.name}
+          change={this.handleImageClick}
+          click={this.handleClick}
           id={host.id}
         />
       )
@@ -33,6 +35,10 @@ export class EntryForm extends Component {
 
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value})
+  }
+
+  handleImageClick = (event) => {
+    this.setState({[event.target.name]: event.target.dataset.host})
   }
 
   findHost = () => {
