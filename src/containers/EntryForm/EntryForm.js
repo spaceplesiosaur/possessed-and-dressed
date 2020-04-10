@@ -23,6 +23,7 @@ export class EntryForm extends Component {
         <MiniHost
           key={host.id}
           picture={host.picture}
+          happy_pic={host.happy_picture}
           name={host.name}
           id={host.id}
         />
