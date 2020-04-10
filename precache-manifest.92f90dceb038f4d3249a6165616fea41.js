@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e8c869c614d71656ae86c5e398706b51",
+    "revision": "422346707d4d4d25aac04fecc06a8787",
     "url": "/possessed-and-dressed/index.html"
   },
   {
-    "revision": "2326201bde2156957158",
+    "revision": "a1b62132938cd5db41bc",
     "url": "/possessed-and-dressed/static/css/main.96801433.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/possessed-and-dressed/static/js/2.67d3af3d.chunk.js.LICENSE"
   },
   {
-    "revision": "2326201bde2156957158",
-    "url": "/possessed-and-dressed/static/js/main.98d20070.chunk.js"
+    "revision": "a1b62132938cd5db41bc",
+    "url": "/possessed-and-dressed/static/js/main.794b2a3c.chunk.js"
   },
   {
     "revision": "50351968c2e70fe125b5",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/possessed-and-dressed/static/css/main.96801433.chunk.css",
-    "main.js": "/possessed-and-dressed/static/js/main.98d20070.chunk.js",
-    "main.js.map": "/possessed-and-dressed/static/js/main.98d20070.chunk.js.map",
+    "main.js": "/possessed-and-dressed/static/js/main.794b2a3c.chunk.js",
+    "main.js.map": "/possessed-and-dressed/static/js/main.794b2a3c.chunk.js.map",
     "runtime-main.js": "/possessed-and-dressed/static/js/runtime-main.9ec8c8c0.js",
     "runtime-main.js.map": "/possessed-and-dressed/static/js/runtime-main.9ec8c8c0.js.map",
     "static/js/2.67d3af3d.chunk.js": "/possessed-and-dressed/static/js/2.67d3af3d.chunk.js",
     "static/js/2.67d3af3d.chunk.js.map": "/possessed-and-dressed/static/js/2.67d3af3d.chunk.js.map",
     "index.html": "/possessed-and-dressed/index.html",
-    "precache-manifest.69f1894e42ca86ce9307abd1304366c1.js": "/possessed-and-dressed/precache-manifest.69f1894e42ca86ce9307abd1304366c1.js",
+    "precache-manifest.92f90dceb038f4d3249a6165616fea41.js": "/possessed-and-dressed/precache-manifest.92f90dceb038f4d3249a6165616fea41.js",
     "service-worker.js": "/possessed-and-dressed/service-worker.js",
     "static/css/main.96801433.chunk.css.map": "/possessed-and-dressed/static/css/main.96801433.chunk.css.map",
     "static/js/2.67d3af3d.chunk.js.LICENSE": "/possessed-and-dressed/static/js/2.67d3af3d.chunk.js.LICENSE",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.9ec8c8c0.js",
     "static/js/2.67d3af3d.chunk.js",
     "static/css/main.96801433.chunk.css",
-    "static/js/main.98d20070.chunk.js"
+    "static/js/main.794b2a3c.chunk.js"
   ]
 }
