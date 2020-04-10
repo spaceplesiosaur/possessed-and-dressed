@@ -90,7 +90,7 @@ export class App extends Component {
           return (
             <>
               <Header />
-              <h1>{match}</h1>
+              <h1>match is: {match.path}, {match.url}</h1>
               <ErrorPage />
             </>
           )
