@@ -9,14 +9,6 @@ export class MiniHost extends Component {
     }
   }
 
-  // switchPic = () => {
-  //   return (
-  //     this.state.happy === true ?
-  //     this.props.picture :
-  //     this.props.happy_pic
-  //   )
-  // }
-
   switchPic = () => {
     if (this.state.ishappy === true) {
       return this.props.happy_pic
