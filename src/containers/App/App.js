@@ -60,7 +60,7 @@ export class App extends Component {
             </>
           )
         }} />
-        <Route exact path={`${process.env.PUBLIC_URL}/hosts/:id`} render={(match) => {
+        <Route exact path="/hosts/:id" render={(match) => {
           const selectedHost = this.props.hostList.find(host => {
             return host.id === parseInt(match.match.params.id)
           })
@@ -75,7 +75,7 @@ export class App extends Component {
             )
           )
         }}/>
-        <Route exact path={`${process.env.PUBLIC_URL}/hosts/:id/:colorName`} render={(match) => {
+        <Route exact path="/hosts/:id/:colorName" render={(match) => {
           return (
             <>
               <Header />
@@ -86,11 +86,10 @@ export class App extends Component {
             </>
           )
         }}/>
-        <Route path='*' render={({ match }) => {
+        <Route path='*' render={() => {
           return (
             <>
               <Header />
-              <h1>match is: {match.path}, {match.url}</h1>
               <ErrorPage />
             </>
           )
