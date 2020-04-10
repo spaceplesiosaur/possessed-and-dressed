@@ -8,15 +8,16 @@ import { createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { rootReducer } from './reducers/index.js'
 import * as serviceWorker from './serviceWorker';
+import { HashRouter } from 'react-router-dom'
 
 const store = createStore(rootReducer, composeWithDevTools())
 
 ReactDOM.render(
 
   <Provider store={store}>
-    <Router>
+    <HashRouter>
       <App />
-    </Router>
+    </HashRouter>
   </Provider>,
   document.getElementById('root')
 );
