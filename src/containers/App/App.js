@@ -52,7 +52,7 @@ export class App extends Component {
     return (
       <main className="app">
       <Switch>
-        <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => {
+        <Route exact path="/" render={() => {
           return (
             <>
               <Header />
