@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "10cfbb35f7103a33a779d53b9ab9a4cf",
+    "revision": "4fd70b3b33377d96b140e8d0d5e509ec",
     "url": "/possessed-and-dressed/index.html"
   },
   {
-    "revision": "0d8b6b1b9cee845dcecb",
+    "revision": "5ce2d655d68c22b5b445",
     "url": "/possessed-and-dressed/static/css/main.96801433.chunk.css"
   },
   {
-    "revision": "a664b3359c5c486facac",
-    "url": "/possessed-and-dressed/static/js/2.67d3af3d.chunk.js"
+    "revision": "a56755f45a02a508f4d4",
+    "url": "/possessed-and-dressed/static/js/2.cd439c60.chunk.js"
   },
   {
     "revision": "e928fe768baa9832b5bc57eae021f30c",
-    "url": "/possessed-and-dressed/static/js/2.67d3af3d.chunk.js.LICENSE"
+    "url": "/possessed-and-dressed/static/js/2.cd439c60.chunk.js.LICENSE"
   },
   {
-    "revision": "0d8b6b1b9cee845dcecb",
-    "url": "/possessed-and-dressed/static/js/main.7e3ddcc0.chunk.js"
+    "revision": "5ce2d655d68c22b5b445",
+    "url": "/possessed-and-dressed/static/js/main.0f04990a.chunk.js"
   },
   {
     "revision": "50351968c2e70fe125b5",

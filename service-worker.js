@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/possessed-and-dressed/precache-manifest.bb40c474aad7104c142d2cf83c3525c3.js"
+  "/possessed-and-dressed/precache-manifest.b1e3a05c18967673493fce8c0af732b0.js"
 );
 
 self.addEventListener('message', (event) => {
