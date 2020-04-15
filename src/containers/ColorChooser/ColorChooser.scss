@@ -8,8 +8,10 @@
 }
 
 .colorList-box {
-  width: 8em;
-  margin-left: 2em;
+  width: 9.5em;
+  height: 2.5em;
+  margin-left: .75em;
+  margin-right: .75em;
   background-color: white;
 }
 
@@ -17,5 +19,5 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  list-style-type: circle;
+  list-style-type: none;
 }

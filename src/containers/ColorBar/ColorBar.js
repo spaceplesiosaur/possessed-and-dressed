@@ -73,7 +73,7 @@ export class ColorBar extends Component {
     return (
       <section className="colorBar-main-frame">
       <h2 className="colorBar-main-header">What color would you like your host to wear?</h2>
-      <p className="colorBar-main-explantion">Remember, it is VERY IMPORTANT to dress your host in something they look their best in - if they don't look their best, the church will become suspicious and may perform an exorcism on them!</p>
+      <p className="colorBar-main-explantion">Remember, it is VERY IMPORTANT to dress your host in something they look their best in - if they don't look their best, The Church will become suspicious and may perform an exorcism! This will hurt you.</p>
       <section className="colorBar-frame-navBar">
         {this.displayColorBar()}
       </section>

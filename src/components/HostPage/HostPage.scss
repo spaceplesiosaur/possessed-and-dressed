@@ -3,7 +3,13 @@ $bright-header-color: #FA1E88;
 $dark-subHeader-color: #541A8B;
 $ghosty-pale-color: #A2B6B5;
 
-
+.hostPage-main-frame {
+  background-image: linear-gradient(#767E81, transparent), url('../../util/images/screaming_ghosts.jpg');
+  background-size: 120%;
+  background-repeat: repeat-y;
+  background-position: cover;
+  padding-top: 2rem
+}
 .hostPage-picture-host {
   border-radius: 5px;
   border: 1px $dark-text-color solid;
@@ -17,5 +23,5 @@ $ghosty-pale-color: #A2B6B5;
 .host-name-tag {
   color: $dark-text-color;
   font-size: 3rem;
-  margin: 3.5rem;
+  margin-bottom: 3.5rem;
 }
