@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/possessed-and-dressed/static/css/main.96801433.chunk.css",
-    "main.js": "/possessed-and-dressed/static/js/main.0f04990a.chunk.js",
-    "main.js.map": "/possessed-and-dressed/static/js/main.0f04990a.chunk.js.map",
+    "main.css": "/possessed-and-dressed/static/css/main.0e846a80.chunk.css",
+    "main.js": "/possessed-and-dressed/static/js/main.4169a310.chunk.js",
+    "main.js.map": "/possessed-and-dressed/static/js/main.4169a310.chunk.js.map",
     "runtime-main.js": "/possessed-and-dressed/static/js/runtime-main.9ec8c8c0.js",
     "runtime-main.js.map": "/possessed-and-dressed/static/js/runtime-main.9ec8c8c0.js.map",
-    "static/js/2.cd439c60.chunk.js": "/possessed-and-dressed/static/js/2.cd439c60.chunk.js",
-    "static/js/2.cd439c60.chunk.js.map": "/possessed-and-dressed/static/js/2.cd439c60.chunk.js.map",
+    "static/js/2.911dabbc.chunk.js": "/possessed-and-dressed/static/js/2.911dabbc.chunk.js",
+    "static/js/2.911dabbc.chunk.js.map": "/possessed-and-dressed/static/js/2.911dabbc.chunk.js.map",
     "index.html": "/possessed-and-dressed/index.html",
-    "precache-manifest.b1e3a05c18967673493fce8c0af732b0.js": "/possessed-and-dressed/precache-manifest.b1e3a05c18967673493fce8c0af732b0.js",
+    "precache-manifest.9c626d493f10e4fa99b6ee0b948cb6a4.js": "/possessed-and-dressed/precache-manifest.9c626d493f10e4fa99b6ee0b948cb6a4.js",
     "service-worker.js": "/possessed-and-dressed/service-worker.js",
-    "static/css/main.96801433.chunk.css.map": "/possessed-and-dressed/static/css/main.96801433.chunk.css.map",
-    "static/js/2.cd439c60.chunk.js.LICENSE": "/possessed-and-dressed/static/js/2.cd439c60.chunk.js.LICENSE",
+    "static/css/main.0e846a80.chunk.css.map": "/possessed-and-dressed/static/css/main.0e846a80.chunk.css.map",
+    "static/js/2.911dabbc.chunk.js.LICENSE": "/possessed-and-dressed/static/js/2.911dabbc.chunk.js.LICENSE",
     "static/media/ColorFeedback.scss": "/possessed-and-dressed/static/media/ghost_background.55a9f072.jpg",
-    "static/media/ColorBar.scss": "/possessed-and-dressed/static/media/rainbow_background.b7cbe552.jpg"
+    "static/media/ColorBar.scss": "/possessed-and-dressed/static/media/rainbow_background.b7cbe552.jpg",
+    "static/media/HostPage.scss": "/possessed-and-dressed/static/media/screaming_ghosts.b7df5426.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9ec8c8c0.js",
-    "static/js/2.cd439c60.chunk.js",
-    "static/css/main.96801433.chunk.css",
-    "static/js/main.0f04990a.chunk.js"
+    "static/js/2.911dabbc.chunk.js",
+    "static/css/main.0e846a80.chunk.css",
+    "static/js/main.4169a310.chunk.js"
   ]
 }
