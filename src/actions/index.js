@@ -8,6 +8,11 @@ export const chooseHost = (hostInfo) => ({
   chosenHost: hostInfo
 })
 
+export const clearHost = () => ({
+  type: 'CLEAR_HOST',
+  chosenHost: {}
+})
+
 export const setCategories = (categoriesInfo) => ({
   type: 'SET_CATEGORIES',
   categories: categoriesInfo
