@@ -72,7 +72,7 @@ export class EntryForm extends Component {
       this.props.host.name ?
       <Redirect to={`/hosts/${this.props.host.id}`} /> :
       <section className="app-entryForm">
-        <h2>Welcome!  Choose the person you would like to possess</h2>
+        <h2>Welcome!  Choose the person you would like to possess today.</h2>
         <div className="entryForm-hostName-inputSet">
           <div className="entryForm-hostName-styling">
             <label htmlFor="hostName" className="entryForm-hostName-label">Chosen Host:</label>

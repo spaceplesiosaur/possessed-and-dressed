@@ -13,6 +13,11 @@ export const clearHost = () => ({
   chosenHost: {}
 })
 
+export const clearColor = () => ({
+  type: 'CLEAR_COLOR',
+  chosenHost: {}
+})
+
 export const setCategories = (categoriesInfo) => ({
   type: 'SET_CATEGORIES',
   categories: categoriesInfo
